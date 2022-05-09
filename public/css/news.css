@@ -1,0 +1,166 @@
+/* CONTENT */
+
+.content-news {
+  width: 90%;
+  margin: 30px auto 30px;
+}
+
+.content-news .main-content {
+  width: 79%;
+  float: left;
+}
+
+.main-content-wrapper{
+  width: 1000px;
+}
+
+.content-news .main-content.single {
+  background: #f9feff;
+  padding: 25px 25px 25px 25px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.content-news .main-content.single .post-title {
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.content-news .main-content .post {
+  width: 95%;
+  height: 270px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background: white;
+  position: relative;
+}
+
+.content-news .popular .post {
+  border-top: 1px solid #e0e0e0;
+  margin-top: -5px;
+  padding-top: 17px;
+}
+.content-news .popular .post .title{
+  text-decoration: none;
+}
+.content-news .popular .post .title:hover,
+.content-news .popular .post .title:hover>h5{
+  text-decoration: none;
+  color: #361CC1;
+}
+
+.content-news .popular .post img {
+  height: 60px;
+  width: 75px;
+  float: left;
+  margin-right: 10px;
+}
+
+.content-news .main-content .post .post-preview i {
+  color: #757575;
+  font-size: .8em;
+}
+
+.content-news .main-content .post .preview-text {
+  line-height: 1.5em;
+  font-size: 1.03em;
+  color: #444;
+}
+
+.content-news .main-content .post .read-more {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid #006669;
+  background: transparent;
+  border-radius: 0px;
+  color: #006669 !important;
+}
+
+.content-news .main-content .post .read-more:hover {
+  background: #006669;
+  color: white !important;
+  transition: .25s;
+}
+
+.content-news .main-content .post .post-image {
+  width: 40%;
+  height: 100%;
+  float: left;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.content-news .main-content .post .post-preview {
+  width: 60%;
+  padding: 10px;
+  float: right;
+}
+
+.content-news .main-content .post .post-content p {
+  align-items: justify !important;
+}
+
+.content-news .main-content .recent-post-title {
+  margin: 20px;
+}
+
+.content-news .sidebar {
+  width: 34%;
+  float: left;
+}
+
+.content-news .sidebar.single {
+  padding: 0px 6px;
+}
+
+.content-news .sidebar .section {
+  background: white;
+  padding: 97px 20px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  marrgin-top: 40px;
+}
+
+.content-news .sidebar .section .section-title {
+  margin: 10px 0px 25px 0px;
+}
+
+.content-news .sidebar .section.search {
+  margin-top: 80px;
+}
+
+.content-news .sidebar .section.topics ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.content-news .sidebar .section.topics ul li a {
+  display: block;
+  padding: 15px 0px 15px 0px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.content-news .sidebar .section.topics ul li a:hover {
+  padding-left: 10px;
+  transition: all 0.3s;
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  /*-- Code cho màn hình vừa (Table) viết ở đây --*/
+.content-news .sidebar.single {
+padding: 30px 10px;
+}
+
+.content-news .popular .post img{
+height: 50px;
+width: 60px;
+}
+
+}

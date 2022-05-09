@@ -1,0 +1,77 @@
+<header class="header">
+
+{{>navbar}}
+
+</header>
+
+<!-- Content -->
+  <!-- school list section starts -->
+    <div class="content-wrap" >
+
+    <div class="schools-list">
+      <h1 style="text-transform:uppercase ;">Tư vấn du học Singapore</h1>
+      <div class="schools-content">
+       
+        <div class="school-list row ">
+          
+        {{#each advises}}
+          <div class="school-item col l-6 m-6 c-12">
+              <a href="/advises/{{this.slug}}">
+            <img src={{this.image}} alt="" srcset="">
+            </a>
+            <p>Đăng bởi admin, ngày {{this.date}}</p>
+            <h3><a href="/advises/{{this.slug}}">{{this.name}}</a></h3>
+          
+            <p>{{this.description}}</p>
+
+          </div>
+             {{/each}}
+         
+
+        </div>
+  
+       
+           <div class="pagination" >
+         
+            <a class="active" href="/advises/?page=1">1</a>
+            <a href="/advises/?page=2">2</a>
+            <a href="/advises/?page=3">3</a>
+            <a href="/advises/?page=4">4</a>
+            <a href="/advises/?page=5">5</a>
+            <a href="/advises/?page=6">6</a>
+    
+        
+          </div>
+        
+
+      </div>
+     
+
+    </div>
+    {{>sidebar}}
+  </div>
+       
+    <!-- school list section ends -->
+
+  
+{{>footer}}
+
+
+<script>
+    // menu responsive icon
+let navbarBtn = document.querySelector(".navbar-list");
+
+document.querySelector("#menu-btn").onclick = () => {
+  navbarBtn.classList.toggle("active");
+  
+};
+
+window.onscroll = () => {
+  navbarBtn.classList.remove("active");
+};
+
+</script>
+
+
+
+

@@ -1,0 +1,466 @@
+
+/* homepage starts */
+
+/* media queries  */
+
+@media (max-width: 1024px) {
+    .hr {
+      margin: 0 400px;
+    }
+    /* background section starts */
+    .bg-slider {
+      height: 400px;
+    }
+  
+    /* background section ends */
+  
+    /* content section starts  */
+    .content-item {
+      padding: 5px 10px;
+    }
+    .content-item h1 {
+      font-size: 1.8rem;
+    }
+  
+    .content-item i {
+      font-size: 3rem;
+      padding: 10px;
+    }
+    .content-item p {
+      font-size: 1.6rem;
+    }
+  
+    /* content section ends  */
+  
+    /* blog section starts */
+    section.blogs {
+      padding: 2rem 0 !important;
+    }
+  
+    .blog-list a > .wider {
+      width: 100%;
+    }
+    .blog-list a h3 {
+      font-size: 1.5rem;
+    }
+  
+    .blog-item {
+      align-items: flex-start;
+    }
+    .admin {
+      display: none;
+    }
+  
+    /* blog section ends */
+  
+    /* advises section starts */
+  
+    section.advises {
+      padding: 2rem 0 !important;
+    }
+  
+    .advise-list {
+      padding: 20px;
+    }
+
+    .advises .advise-list {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .column .advise-item {
+      width: 90% !important;
+      padding: 0 20px;
+    }
+    .advise-item img {
+      width: 100%;
+    }
+    /* advises section ends */
+  
+    /* testimonial section starts */
+    section.testimonial {
+      padding: 2rem 0 !important;
+      height: 100%;
+    }
+  
+    .testimonial-list .testimonial-item {
+      padding: 10px 6px;
+    }
+    .testimonial-list .testimonial-item p {
+      height: 150px;
+    }
+    /* testimonial section ends */
+  
+    /* schools section starts */
+    /* .school-list img {
+      height: 120px !important;
+      width: 200px !important;
+    } */
+    /* schools section ends */
+  }
+  
+  #menu-btn {
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .bg-slider {
+      height: 350px;
+    }
+    /* header navbar section starts */
+    #menu-btn {
+      display: inline-block;
+      font-size: 3rem;
+      color: var(--main-color);
+    }
+  
+    .header .navbar-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 90%;
+      right: -100%;
+      width: 28rem;
+      box-shadow: var(--box-shadow);
+      border-radius: 3px;
+      background: #fff;
+    }
+  
+    .header .navbar-list li {
+      padding: 15px 5px 15px 10px;
+    }
+    .header .navbar-list li:hover {
+      background-color: var(--light-grey);
+      color: var(--main-color);
+    }
+  
+    .list-item li {
+      width: 100%;
+      color: var(--black);
+      cursor: pointer;
+    }
+  
+    .header .navbar-list.active {
+      right: 1rem;
+      transition: 0.5s linear;
+    }
+  
+    /* header navbar section ends */
+  
+    /* content section starts */
+    section.content {
+      padding: 2rem !important;
+    }
+  
+    .content-item {
+      width: 100%;
+      line-height: 2.5rem;
+      margin: 0 4px 20px;
+      padding: 20px;
+    }
+  
+    .content-item i {
+      font-size: 3rem;
+      padding: 5px;
+    }
+  
+    .content-item h1 {
+      padding: 3px;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+    .content-item p {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+    /* content section ends */
+  
+    /* blog  section starts */
+    .blogs-content{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .blog-list{
+        padding: 10px;
+    }
+    .blog-item {
+       
+        display: flex;
+        flex-direction: column;
+    }
+    .blog-item img {
+      width: 100%;
+    }
+  
+    /* blog  section ends */
+  
+    /* schools section starts */
+  
+    /* .school-list img {
+      height: 100px !important;
+      width: 160px !important;
+    } */
+  
+    /* schools section ends */
+  
+    .advises h1 {
+      padding-top: 0px !important;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* topbar section starts */
+    .topbar {
+      padding: 0.5rem 2%;
+    }
+  
+    .topbar-info li i {
+    }
+  
+    .topbar-info li a {
+      font-size: 1.2rem;
+    }
+  
+    /* topbar section ends */
+  
+    /* background slider section starts  */
+    .bg-slider {
+      height: 280px;
+    }
+  
+    .bottom-left {
+      left: 5%;
+      line-height: 35px;
+      bottom: 20%;
+    }
+  
+    .bottom-left h3 {
+      font-size: 2rem;
+    }
+    .bottom-left h1 {
+      font-size: 3rem;
+    }
+    .bottom-left p {
+      font-size: 1.6rem;
+    }
+  
+    /* button next and prev */
+    .btn-slide {
+      bottom: 40%;
+    }
+  
+    .btn-slide button {
+      font-size: 2rem;
+    }
+  
+    .main-btn {
+      width: 150px;
+    }
+  
+    .bg-btn {
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 40px;
+    }
+    /* background slider section ends  */
+  
+    /*  content section starts */
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+    }
+  
+    .content-item {
+      height: 200px;
+      padding: 10px;
+    }
+    /*  content section ends */
+  
+    /* advise section starts */
+    .hr {
+      display: none;
+    }
+    .advise-list {
+      display: flex !important;
+      flex-direction: column;
+      padding: 0 3% !important;
+    }
+  
+    .advise-item {
+      width: 100% !important;
+      padding: 0 !important;
+    }
+    .column{
+        display: block;
+    }
+    /* advise section ends */
+  
+    /* testimonial section starts */
+  
+    .testimonial-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .testimonial-list .testimonial-item {
+      width: 80%;
+      text-align: center;
+    }
+    .testimonial-list .testimonial-item p {
+      text-align: center;
+      padding: 10px;
+      height: 95%;
+    }
+  
+    /* testimonial section ends */
+  
+    /* schools section starts */
+    .school-item{
+        width: 100%;
+    }
+    .schools img {
+        width: 100%;
+        height: 180px;
+      
+    }
+    /* .school-list img {
+      height: 85px !important;
+      width: 130px !important;
+    } */
+  
+    /* schools section ends */
+  }
+  
+  @media (max-width: 478px) {
+
+    .testimonial-list .testimonial-item {
+        padding: 0 !important;
+    }
+    .testimonial-list .testimonial-item img {
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    section {
+      padding: 2rem 5%;
+    }
+  
+    /* topbar section starts */
+  
+    .right-topbar {
+      display: none;
+    }
+    .left-topbar {
+      display: block;
+    }
+    .topbar {
+      padding: 0.5rem 2%;
+    }
+  
+    .topbar-info li i {
+      font-size: 1rem;
+    }
+  
+    .topbar-info li a {
+      font-size: 1rem;
+    }
+  
+    /* topbar section ends */
+  
+    /* background slider section starts  */
+    .bg-slider {
+      height: 230px;
+    }
+  
+    .bottom-left {
+      left: 4%;
+      line-height: 28px;
+      bottom: 15%;
+    }
+  
+    .bottom-left h3 {
+      font-size: 1.8rem;
+    }
+    .bottom-left h1 {
+      font-size: 2.8rem;
+    }
+    .bottom-left p {
+      font-size: 1.4rem;
+    }
+  
+    /* background slider section ends  */
+    /* blogs section starts */
+    .blogs-content {
+        width: 100%;
+      
+    }
+  
+    .blog-item {
+      display: flex;
+      flex-direction: column !important;
+    }
+    .blog-item img {
+      /* width: 80px; */
+    }
+  
+    .blog-list a > .wider {
+      /* width: 100px !important; */
+    }
+    /* blogs section ends */
+  
+    /* schools section starts */
+  
+    .school-list img {
+      margin: 4px 2% !important;
+    }
+    .school-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .school-list {
+      display: block !important;
+      padding: 5px !important;
+    }
+  
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+    /* schools section ends */
+  
+    /* content section starts  */
+  
+    .content-item {
+      height: 100%;
+    }
+  
+    /* content section ends  */
+  }
+  
+  @media (max-width: 320px) {
+    .blog-item img {
+      /* width: 70px; */
+    }
+  
+    .blog-list a > .wider {
+      /* width: 90px !important; */
+    }
+  
+    /* .school-list img {
+      height: 80px !important;
+      width: 115px !important;
+    } */
+  }
+  
+

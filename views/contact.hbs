@@ -1,0 +1,53 @@
+
+
+<header class="header">
+
+{{>navbar}}
+
+</header>
+
+
+<!-- Content -->
+  <!-- school list section starts -->
+    <div class="content-wrap" >
+
+    <div class="contact">
+    <div class="contact-content" style="float: left;">
+       
+      <h1 style="text-transform:uppercase ;">Liên hệ du học Henry Nguyen</h1>
+      <p>Địa chỉ: 74 Nguyễn Văn Linh, Hải Châu, Đà Nẵng</p>
+      <p>Điện thoại: 0905960490</p>
+      <p>Email:info.dhtm@gmail.com </p>
+      <p>Facebook: <a href="https://www.facebook.com/Trung-t%C3%A2m-Anh-Ng%E1%BB%AF-Du-h%E1%BB%8Dc-Singapore-Henry-Nguyen-1898181863631359">Du Học Henry Nguyen</a></p>
+    
+    </div>
+    <div class="address-content" style="float: right;">
+        <h1>Vị trí trung tâm du học Henry Nguyen</h1>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.094323599877!2d108.21225681465125!3d16.060594388886308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219ca729360d1%3A0x72c96379672c692e!2zNzQgTmd1eeG7hW4gVsSDbiBMaW5oLCBOYW0gRMawxqFuZywgSOG6o2kgQ2jDonUsIMSQw6AgTuG6tW5nIDU1MDAwMCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1641458267203!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+    </div>
+ </div>
+  </div>
+       
+
+{{>footer}}
+
+
+<script>
+
+
+// menu responsive icon
+let navbarBtn = document.querySelector(".navbar-list");
+
+document.querySelector("#menu-btn").onclick = () => {
+  navbarBtn.classList.toggle("active");
+  //   navbarBtn.classList.toggle("active");
+};
+
+window.onscroll = () => {
+  navbarBtn.classList.remove("active");
+};
+    
+</script>

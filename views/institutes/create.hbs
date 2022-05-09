@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="/css/style-admin.css">
+
+    <!-- Admin Styling -->
+    <link rel="stylesheet" href="/css/admin.css">
+
+    {{!-- boostrap --}}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/summernote/summernote-bs4.css">
+    <title>Admin Section - Add Post</title>
+</head>
+
+<body>
+    {{>nav-admin}}
+
+    <!-- Admin Page Wrapper -->
+    <div class="admin-wrapper">
+
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <ul>
+          
+                <li><a href="/admin/post-index">Quản Lý Tin Tức</a></li>
+                <li><a href="/admin/institute-index">Quản Lý Trường Đối Tác</a></li>
+                <li><a href="/admin/advise-index">Quản lý tư vấn du học</a></li>
+                <li><a href="/admin/feedback-index">Quản lý bài feedbacks</a></li>
+                <li><a href="/admin/rent-index">Quản lý bài viết thuê nhà</a></li>
+            </ul>
+        </div>
+        <!-- // Left Sidebar -->
+
+
+        <!-- Admin Content -->
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="/admin/post-index" class="btn-main btn-big">Quay lại</a>
+            </div>
+
+
+            <div class="">
+
+                <h4 class="page-title mt-4">Thêm Trường Mới</h4>
+                <div class="mt-4 container form-submit">
+                    <form method="POST" action="/institutes/store" >
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Tiêu đề</label>
+                            <input type="text" class="form-control" name="name">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="author" class="form-label">Tác giả</label>
+                            <input type="text" class="form-control" name="author">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Mô tả</label>
+                            <input type="text" class="form-control" name="description">
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image link</label>
+                            <input type="text" class="form-control" name="image">
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Ngày Đăng</label>
+                            <input type="text" class="form-control" name="date" placeholder="Ví dụ: dd-mm-yyyy">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="body" class="form-label">Nội dung</label>
+                            <textarea id="summernote" class="form-control" name="body"></textarea>
+
+                        </div>
+
+
+
+                        <button type="submit" class="btn btn-primary">Thêm bài viết</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- // Admin Content -->
+
+    </div>
+    <!-- // Page Wrapper -->
+
+
+
+    <!-- JQuery -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script src="/summernote/summernote-bs4.js"></script>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Nhập nội dung tại đây...',
+            height: 400,
+            minHeight: 200
+        });
+    </script>
+
+
+</body>
+
+</html>

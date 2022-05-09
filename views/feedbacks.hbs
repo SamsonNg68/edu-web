@@ -1,0 +1,70 @@
+<header class="header">
+
+{{>navbar}}
+
+</header>
+
+<!-- Content -->
+  <!-- school list section starts -->
+    <div class="content-wrap" >
+
+    <div class="schools-list">
+      <h1 style="text-transform:uppercase ;">Phản hồi từ khách hàng</h1>
+      <div class="schools-content">
+       
+        <div class="school-list row ">
+          
+        {{#each feedbacks}}
+          <div class="padding">
+            <img src={{this.image}} alt="" srcset="">
+          </div>
+             {{/each}}
+         
+
+        </div>
+  
+       
+           <div class="pagination" >
+         
+            <a class="active" href="/feedbacks/?page=1">1</a>
+            <a href="/feedbacks/?page=2">2</a>
+            <a href="/feedbacks/?page=3">3</a>
+            <a href="/feedbacks/?page=4">4</a>
+            <a href="/feedbacks/?page=5">5</a>
+            <a href="/feedbacks/?page=6">6</a>
+    
+        
+          </div>
+        
+
+      </div>
+     
+
+    </div>
+    {{>sidebar}}
+  </div>
+       
+    <!-- school list section ends -->
+
+  
+{{>footer}}
+
+
+<script>
+    // menu responsive icon
+let navbarBtn = document.querySelector(".navbar-list");
+
+document.querySelector("#menu-btn").onclick = () => {
+  navbarBtn.classList.toggle("active");
+  
+};
+
+window.onscroll = () => {
+  navbarBtn.classList.remove("active");
+};
+
+</script>
+
+
+
+

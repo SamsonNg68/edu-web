@@ -1,0 +1,17 @@
+
+/* This file using for custom style in summernote editer */
+
+
+.MsoTableGrid{
+    /* width: 640.5pt !important; */
+    margin-left: -4.25pt !important;
+    border: none;
+}
+
+.MsoListParagraphCxSpFirst,
+.MsoListParagraphCxSpMiddle,
+.MsoListParagraphCxSpLast{
+   text-indent: 0 !important;
+}
+
+.fb_iframe_widget iframe{width: 383px !important;padding-left: 41px !important;}

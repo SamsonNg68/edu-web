@@ -1,0 +1,86 @@
+header {
+    background: var(--main-color);
+  }
+  
+  .admin-wrapper {
+    display: flex;
+    height: calc(100% - 66px);
+  }
+  
+  .admin-wrapper .left-sidebar {
+    flex: 2;
+    height: 100%;
+    background: var(--main-color);
+    /* width: 200px !important; */
+  }
+  
+  .admin-wrapper .left-sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+  }
+  
+  .admin-wrapper .left-sidebar ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 18px !important;
+    display: block !important;
+    border-top: 1px solid black !important;
+    font-size: 1.6rem;
+  }
+  
+  .admin-wrapper .left-sidebar ul li a:hover {
+    background: var(--blue-light);
+  }
+  
+  .admin-wrapper .admin-content {
+    flex: 8;
+    /* height: 100%; */
+    padding: 26px 20px 0px;
+    overflow-y: scroll;
+    width: 128%;
+    /* height: 934px; */
+  }
+  .admin-content .page-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.6rem;
+  }
+  
+  th,
+  td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3;
+  }
+  
+  .edit {
+    color: green;
+  }
+  
+  .delete {
+    color: red;
+  }
+  
+  .publish {
+    color: blue;
+  }
+  
+  .edit:hover,
+  .delete:hover,
+  .publish:hover {
+    text-decoration: underline;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  

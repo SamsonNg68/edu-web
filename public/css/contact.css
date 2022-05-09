@@ -1,0 +1,52 @@
+.contact{
+  width: 100%;
+  padding: 5rem 4%;
+  height: 600px;
+  background-color: white;
+}
+
+.contact-content{
+  width: 50%;
+  text-align: justify;
+
+}
+.contact-content h1,
+.address-content h1{
+  text-transform: uppercase;
+  padding: 10px 0;
+
+}
+.contact-content p{
+  padding:15px 20px ;
+  font-size: 2rem;
+
+}
+.address-content{
+  width: 50%;
+
+}
+
+@media (max-width: 1024px) {
+ iframe {
+   width: 100%;
+ }
+
+}
+@media (max-width: 730px) {
+  .contact{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+ iframe {
+   width: 100%;
+ }
+
+ .contact-content,
+.address-content {
+  width: 100%;
+
+}
+ 
+
+}

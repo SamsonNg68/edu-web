@@ -1,0 +1,258 @@
+.content-wrap{
+  display: flex;
+}
+
+.schools-list {
+    background-color: var(--white);
+    padding: 6rem 5rem;
+    width: 100%;
+ 
+  }
+.padding{
+  padding: 20px;
+  
+}
+.padding img{
+  width: 460px;
+
+}
+  .schools-list .schools-list h1 {
+    padding: 10px;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+  }
+   .schools-list .schools-content {
+    display: flex;
+
+  } 
+   
+  .schools-list .school-list {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .schools-list .school-item {
+    padding: 20px 5%;
+    line-height: 2.2rem;
+    cursor: pointer;
+  }
+  .schools-list .school-item img {
+    width: 100% !important;
+    height: 250px !important;
+  }
+  .schools-list .school-item h3 {
+    font-size: 2rem;
+  }
+  .schools-list .school-item h3:hover {
+    color: var(--blue);
+  }
+  .schools-list .school-item p {
+    font-size: 1.4rem;
+  }
+  
+  .sidebar {
+    width: 35%;
+    /* margin-left: 3rem; */
+  }
+  .sidebar .media-img img {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .lastest-news {
+    background-color: #f2f3f7;
+  }
+  .lastest-news h3 {
+    font-size: 2rem;
+    padding: 20px 10px;
+    text-transform: uppercase;
+  }
+  .news-item {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .news-item h4 {
+    font-size: 1.6rem;
+    padding: 5px;
+  }
+  .news-item h4:hover {
+    color: var(--blue);
+  }
+  
+/* media queries */
+/* media queries  */
+
+@media (max-width: 1024px) {
+
+  .content-wrap{
+    display: block !important ;
+  }
+  /* schools section starts */
+
+  .schools-list .school-item img {
+
+    height: 230px;
+  }
+  .schools-list {
+
+    padding: 6rem 2rem;
+
+ 
+  }
+  .padding{
+    padding: 20px 0;
+  }
+
+  .padding img{
+    width: 100%;
+  
+  }
+
+  /* schools section ends */
+  /* sidebar section starts */
+  /* .sidebar {
+    margin-left: 1rem !important;
+  } */
+  /* sidebar section ends */
+}
+
+#menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* header navbar section starts */
+  #menu-btn {
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--main-color);
+  }
+
+  .header .navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 90%;
+    right: -100%;
+    width: 28rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+    background: #fff;
+  }
+
+  .header .navbar-list li {
+    padding: 15px 5px 15px 10px;
+  }
+  .header .navbar-list li:hover {
+    background-color: var(--light-grey);
+    color: var(--main-color);
+  }
+
+  .list-item li {
+    width: 100%;
+    color: var(--black);
+    cursor: pointer;
+  }
+
+  .header .navbar-list.active {
+    right: 1rem;
+    transition: 0.5s linear;
+  }
+
+  /* header navbar section ends */
+
+
+  /* sidebar section starts */
+  .news-item {
+    display: block !important;
+  }
+
+  .news-item img {
+    width: 100%;
+    height: 250px !important;
+  }
+  /* sidebar section ends */
+
+  .content-wrap{
+    display: block;
+  }
+}
+
+
+@media (max-width: 600px) {
+  /* topbar section starts */
+  .topbar {
+    padding: 0.5rem 2%;
+  }
+
+  .topbar-info li i {
+  }
+
+  .topbar-info li a {
+    font-size: 1.2rem;
+  }
+
+  /* topbar section ends */
+
+ 
+}
+@media (max-width: 500px) {
+  /* topbar section starts */
+  .topbar {
+    padding: 0.5rem 2%;
+  }
+
+  .topbar-info li i {
+  }
+
+  .topbar-info li a {
+    font-size: 1.2rem;
+  }
+
+  /* topbar section ends */
+  .schools-content {
+    display: block !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 20px;
+}
+}
+
+@media (max-width: 450px) {
+  section {
+    padding: 2rem 5%;
+  }
+
+  /* topbar section starts */
+
+  .right-topbar {
+    display: none;
+  }
+  .left-topbar {
+    display: block;
+  }
+  .topbar {
+    padding: 0.5rem 2%;
+  }
+
+  .topbar-info li i {
+    font-size: 1rem;
+  }
+
+  .topbar-info li a {
+    font-size: 1rem;
+  }
+
+  /* topbar section ends */
+}
+
+@media (max-width: 320px) {
+}
+
+

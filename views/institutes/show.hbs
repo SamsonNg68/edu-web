@@ -1,0 +1,53 @@
+
+
+<header class="header">
+
+{{>navbar}}
+
+</header>
+
+
+<!-- Content -->
+  <!-- school list section starts -->
+    <div class="content-wrap" >
+
+      <div class="post">
+      <h1 style="text-transform:uppercase ;">{{institutes.name}} </h1>
+      <div class="posts-content">
+        <div class="post-list row ">
+             {{!-- <h3 class="post-title">{{institutes.name}} </h3> --}}
+                <div class="post-date">
+                    <p>Đăng bởi admin, ngày {{institutes.date}}</p>
+                </div>
+                <div class="post-content">
+                    {{{institutes.body}}}
+
+
+                </div>
+        </div>       
+
+      </div>
+    </div>
+    {{>sidebar}}
+  </div>
+       
+
+{{>footer}}
+
+
+<script>
+
+
+// menu responsive icon
+let navbarBtn = document.querySelector(".navbar-list");
+
+document.querySelector("#menu-btn").onclick = () => {
+  navbarBtn.classList.toggle("active");
+  //   navbarBtn.classList.toggle("active");
+};
+
+window.onscroll = () => {
+  navbarBtn.classList.remove("active");
+};
+    
+</script>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="/css/style-admin.css">
+
+    <!-- Admin Styling -->
+    <link rel="stylesheet" href="/css/admin.css">
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/3005522056.js" crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+
+    <!-- Carousel  -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+
+    <!-- testimonial carousel -->
+    {{!-- <link rel="stylesheet" href="/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="/owlcarousel/owl.carousel.min.js"></script> --}}
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+
+
+
+
+    <title>Quản Lý Tin Tức</title>
+</head>
+
+<body>
+    {{>nav-admin}}
+
+    <!-- Admin Page Wrapper -->
+    <div class="admin-wrapper">
+
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <ul>
+               
+                <li><a href="/admin/post-index">Quản Lý Tin Tức</a></li>
+                <li><a href="/admin/institute-index">Quản Lý Trường Đối Tác</a></li>
+                <li><a href="/admin/advise-index">Quản lý tư vấn du học</a></li>
+                <li><a href="/admin/feedback-index">Quản lý bài feedbacks</a></li>
+                <li><a href="/admin/rent-index">Quản lý bài viết thuê nhà</a></li>
+            </ul>
+        </div>
+        <!-- // Left Sidebar -->
+
+
+        <!-- Admin Content -->
+        <form name="container-form" method="POST" class="admin-content" action="/institutes/handle-form">
+            <h2 class="" style="font-family: 'Space Grotesk', sans-serif; font-weight: bold;">BÀI VIẾT ĐÃ XÓA</h2>
+            <div class="button-group">
+                <a href="/admin/advise-index" class="btn-main btn-big">Quay lại</a>
+            </div>
+            
+
+            <div class="content-admin">
+
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>#</th>
+                        <th>Tiêu đề</th>
+                        <th>Tác giả</th>
+                        <th>Thời gian xóa</th>
+                        <th colspan="3">Hành động</th>
+                    </thead>
+                    <div class="d-flex align-items-center mt-4 mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox-all">
+                            <label class="form-check-label" for="checkbox-all">
+                                Chọn tất cả
+                            </label>
+                        </div>
+                        <select class="custom-select select-all-option" name="action" required>
+                            <option value="">--Chọn hành động--</option>
+                            <option value="restore">Khôi Phục</option>
+                            <option value="force">Xóa vĩnh viễn</option>
+
+                        </select>
+                        <button class="btn btn-primary btn-sm btn-check-all-submit" disabled>Áp dụng</button>
+                    </div>
+                    <tbody>
+                        {{#each advises}}
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="adviseIds[]"
+                                        value="{{this._id}}">
+                                </div>
+                            </td>
+                            <td>{{sum @index 1}}</td>
+                            <td>{{this.name}}</td>
+                            <td>{{this.author}}</td>
+                            <td>{{this.deletedAt}}</td>
+                            <td><a href="" class="btn-restore" data-id="{{this._id}}">Khôi phục</a></td>
+                            <td><a href="" class="delete" data-bs-toggle="modal" data-id="{{this._id}}"
+                                    data-bs-target="#delete-advise-modal">Xóa vĩnh viễn</a></td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                            <td colspan="5" class="text-center">
+                                Thùng rác trống.
+
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+            </div>
+
+        </form>
+        <!-- // Admin Content -->
+
+    </div>
+    <!-- // Page Wrapper -->
+
+
+    {{!-- confirm delete --}}
+
+    <div id="delete-advise-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Xóa bài viết?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Hành động này không thể khôi phục. Bạn vẫn muốn xóa bài viết này?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-delete-advise" type="button" class="btn btn-danger">Xóa bỏ</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <form name="delete-advise-form" method="POST"></form>
+    <form name="restore-advise-form" method="POST"></form>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            var adviseId;
+            var deleteForm = document.forms['delete-advise-form'];
+            var restoreForm = document.forms['restore-advise-form'];
+            var btnDeleteAdvise = $('#btn-delete-advise');
+            var deleteModal = document.getElementById('delete-advise-modal');
+            var restoreBtn = $('.btn-restore');
+            var checkboxAll = $('#checkbox-all');
+            var adviseItemCheckbox = $('input[name="adviseIds[]"]');
+            var checkAllSubmitBtn = $('.btn-check-all-submit');
+            var containerForm = $('form[name="container-form"]')
+
+
+
+            deleteModal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget;
+                adviseId = button.getAttribute('data-id');
+
+            });
+
+
+            btnDeleteAdvise.click( function () {
+                deleteForm.action = '/advises/' + adviseId + '/force?_method=DELETE';
+                deleteForm.submit();
+            });
+
+            restoreBtn.click(function (event) {
+                event.preventDefault();
+                var adviseId = $(this).data('id');
+                restoreForm.action = '/advises/' + adviseId + '/restore?_method=PATCH';
+                restoreForm.submit();
+            });
+
+
+            checkboxAll.change(function () {
+                var isCheckedAll = $(this).prop('checked');
+                adviseItemCheckbox.prop('checked', isCheckedAll);
+                renderCheckAllSubmitBtn();
+            })
+
+
+            adviseItemCheckbox.change(function () {
+                var isCheckedAll = adviseItemCheckbox.length === $('input[name="adviseIds[]"]:checked').length;
+                checkboxAll.prop('checked', isCheckedAll);
+                renderCheckAllSubmitBtn();
+
+            })
+          
+            //re-render check all submit btn
+            function renderCheckAllSubmitBtn() {
+                var checkedOut = $('input[name="adviseIds[]"]:checked').length;
+                if (checkedOut > 0) {
+                    checkAllSubmitBtn.attr('disabled', false);
+                } else {
+                    checkAllSubmitBtn.attr('disabled', true);
+                }
+            }
+
+
+        });
+    </script>
+
+
+
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Custom Script -->
+    {{!--
+    <script src="../../js/scripts.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+
+<!-- Main js -->
+<script src="/js/main.js"></script>
+
+
+<!-- Boostrap Link -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

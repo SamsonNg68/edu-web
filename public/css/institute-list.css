@@ -1,0 +1,134 @@
+/* CONTENT */
+
+.content-il {
+  width: 90%;
+  margin: 30px auto 30px;
+}
+
+.content-il .main-content {
+  width: 65%;
+  float: left;
+}
+
+
+.content-il .main-content .post {
+  display: flex;
+  width: 95%;
+  height: 270px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  border: #cdcdcd 1px solid;
+  background: white;
+  position: relative;
+}
+
+.content-il .popular .post {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.content-il .popular .post img {
+  height: 60px;
+  width: 75px;
+  float: left;
+  margin-right: 10px;
+}
+
+.content-il .main-content .post .post-preview i {
+  color: #757575;
+  font-size: .8em;
+}
+
+.content-il .main-content .post .preview-text {
+  line-height: 1.5em;
+  font-size: 1.03em;
+  color: #444;
+}
+
+.content-il .main-content .post .read-more {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  border-radius: 3px;
+  color: var(--primary-color)!important;
+}
+
+.content-il .main-content .post .read-more:hover {
+  background: var(--primary-color);
+  color: white !important;
+  transition: .25s;
+}
+
+.content-il .main-content .post .post-image {
+  width: 420px;
+  height: 100.1%;
+  float: left;
+  overflow: hidden;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.content-il .main-content .post .post-preview {
+  width: 75%;
+  padding: 10px 30px;
+  float: right;
+}
+.content-il .main-content .post .post-preview a,
+.post a {
+  color: black;
+  text-decoration: none;
+}
+.content-il .main-content .post .post-preview a:hover,
+.post a:hover>h5 {
+  color: #361CC1;
+}
+
+.content-il .main-content .recent-post-title {
+  margin-bottom: 50px ;
+}
+
+.content-il .sidebar {
+  width: 33%;
+  float: left;
+}
+
+.content-il .sidebar.single {
+  padding: 0px 10px;
+}
+
+.content-il .sidebar .section {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.content-il .sidebar .section .section-title {
+  margin: 10px 0px 10px 0px;
+}
+
+.content-il .sidebar .section.search {
+  margin-top: 80px;
+}
+
+.content-il .sidebar .section.topics ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.content-il .sidebar .section.topics ul li a {
+  display: block;
+  padding: 15px 0px 15px 0px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.content-il .sidebar .section.topics ul li a:hover {
+  padding-left: 10px;
+  transition: all 0.3s;
+}

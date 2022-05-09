@@ -1,0 +1,207 @@
+/* CONTENT */
+
+.content {
+    /* width: 90%; */
+    /* margin: 30px auto 30px; */
+  }
+  
+  .content .main-content {
+    width: 90%;
+    float: left;
+  }
+
+  .main-content-wrapper{
+    width: 1000px;
+  }
+  
+  .content .main-content.single {
+    background: white;
+    padding: 20px 0px;
+    font-size: 1.1em;
+    border-radius: 5px;
+  }
+  
+  .content .main-content.single .post-title {
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+  
+  .content .main-content .post {
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+  }
+  
+  .content .popular .post {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .content .popular .post .title{
+    text-decoration: none;
+  }
+  .content .popular .post .title:hover,
+  .content .popular .post .title:hover>h5{
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  .content .popular .post img {
+    height: 60px;
+    width: 75px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .content .main-content .post .post-preview i {
+    color: #757575;
+    font-size: .8em;
+  }
+  
+  .content .main-content .post .preview-text {
+    line-height: 1.5em;
+    font-size: 1.03em;
+    color: #444;
+  }
+  
+  .content .main-content .post .read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #006669;
+    background: transparent;
+    border-radius: 0px;
+    color: #006669 !important;
+  }
+  
+  .content .main-content .post .read-more:hover {
+    background: #006669;
+    color: white !important;
+    transition: .25s;
+  }
+  
+  .content .main-content .post .post-image {
+    width: 40%;
+    height: 100%;
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .content .main-content .post .post-preview {
+    width: 60%;
+    padding: 10px;
+    float: right;
+  }
+  
+  .content .main-content .post .post-content p {
+    align-items: justify !important;
+  }
+  
+  .content .main-content .recent-post-title {
+    margin: 20px;
+  }
+  
+  .content .sidebar {
+    width: 30%;
+    float: left;
+  }
+  
+  .content .sidebar.single {
+    padding: 0px 10px;
+  }
+  
+  .content .sidebar .section {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .content .sidebar .section .section-title {
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .content .sidebar .section.search {
+    margin-top: 80px;
+  }
+  
+  .content .sidebar .section.topics ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .content .sidebar .section.topics ul li a {
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s;
+  }
+  
+  .content .sidebar .section.topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+  }
+
+
+
+
+  /* COMMENTS */
+  .comment-area{
+    margin-bottom: 30px;
+  }
+  .comment-box{
+    width: 500px;
+  }
+
+  .comment-box h2{
+    font-size: 20px ;
+    margin-bottom: 15px;
+  }
+
+  .comment-box input{
+    width:  100%;
+    height: 50px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #86b086;
+  }
+
+  .comment-box input:focus {
+    border: 1px solid #000;
+    outline: 0;
+  }
+
+  .comment-box textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border:  1px solid #86b086;
+  }
+
+  .comment-box textarea:focus {
+    border: 1px solid #000;
+    outline: 0;
+  }
+
+
+@media only screen and (max-width: 1024px) {
+    /*-- Code cho màn hình vừa (Table) viết ở đây --*/
+.content .sidebar.single {
+  padding: 30px 10px;
+}
+
+.content .popular .post img{
+  height: 50px;
+  width: 60px;
+}
+
+}

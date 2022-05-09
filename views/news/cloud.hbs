@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="/css/style-admin.css">
+
+    <!-- Admin Styling -->
+    <link rel="stylesheet" href="/css/admin.css">
+
+    {{!-- boostrap --}}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/summernote/summernote-bs4.css">
+    <title>Admin Section - Add Post</title>
+</head>
+
+<body>
+    {{>nav-admin}}
+    <!-- Admin Page Wrapper -->
+    <div class="admin-wrapper">
+
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="/admin/user-index">Quản Lý Admin</a></li>
+                <li><a href="/admin/post-index">Quản Lý Tin Tức</a></li>
+                <li><a href="/admin/institute-index">Quản Lý Trường Đối Tác</a></li>
+                <li><a href="#">Lưu Trữ Ảnh</a></li>
+            </ul>
+        </div>
+        <!-- // Left Sidebar -->
+
+
+        <!-- Admin Content -->
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="/admin/post-index" class="btn-main btn-big">Quay lại</a>
+                <a href="https://cloudinary.com/console/c-d02aa0c5a8f6bbbcdbd75442459447/media_library/folders/bdc173144e0967bccbf401225dce0a9eba"
+                    target="_blank" class="btn-main btn-big">Cloudinary (Link ảnh)</a>
+            </div>
+
+
+            <div class="content">
+
+                <h4 class="page-title mt-4">Thêm Tin Mới</h4>
+                <div class="mt-4 container form-submit">
+                    <form method="POST" action="/news/upload" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Ảnh</label>
+                            <input type="file" class="form-control" name="image">
+
+                        </div>
+
+
+
+                        <button type="submit" class="btn btn-primary">Thêm Ảnh</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- // Admin Content -->
+
+    </div>
+    <!-- // Page Wrapper -->
+
+
+
+    <!-- JQuery -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script src="/summernote/summernote-bs4.js"></script>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Nhập nội dung tại đây...',
+            height: 400,
+            minHeight: 200
+        });
+    </script>
+
+
+</body>
+
+</html>

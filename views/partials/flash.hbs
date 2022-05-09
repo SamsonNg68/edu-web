@@ -1,0 +1,47 @@
+
+
+
+{{#if success}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{success}}
+    <span type="button" class="close" data-bs-dismiss="alert" aria-label="Close" aria-hidden="true">&times;</span>
+</div>
+
+
+{{/if}}
+
+{{#if error}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{error}}
+    <span type="button" class="close" data-bs-dismiss="alert" aria-label="Close" aria-hidden="true">&times;</span>
+</div>
+{{/if}}
+
+
+<style>
+    /* The alert message box */
+.alert {
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.close {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+
+
+}
+
+/* When moving the mouse over the close button */
+.close:hover {
+  color: black;
+}
+</style>
+
